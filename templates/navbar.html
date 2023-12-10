@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+}
+
+nav li {
+    margin: 0 15px; /* Add some spacing between list items */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        width: 100%;
+        margin-right: 40;
+    }
+
+    .navbar-nav .nav-item a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item a span {
+        display: none;
+    }
+
+    .navbar-nav .nav-item a img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+</style>
+<!-- Your HTML code -->
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='css/MSUIIT NMPC Logo.png') }}" width="290" height="85" class="img-fluid" alt="Logo">
+        </a>
+
+        <!-- Navigation links on the second layer -->
+        <div id="navbarSupportedContent">
+            <ul class="navbar-nav">
+
+                <!-- About us -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://msuiitcoop.org/about.php">
+                        <span>ABOUT US </span>
+                        <img src="{{ url_for('static', filename='css/About Us.png') }}" width="32" height="30" alt="About Logo">
+                    </a>
+                </li>
+                
+                <!-- Products and Services -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://msuiitcoop.org/products-services.php">
+                        <span>PRODUCTS & SERVICES</span>
+                        <img src="{{ url_for('static', filename='css/Products.png') }}" width="35" height="30" alt="Product logo">
+                    </a>
+                </li>
+
+                <!-- Allied Businesses -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://msuiitcoop.org/allied-business.php">
+                        <span>ALLIED BUSINESSES</span>
+                        <img src="{{ url_for('static', filename='css/allied.png') }}" width="40" height="30" alt="allied logo">
+                    </a>
+                </li>
+
+                <!-- Membership -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://msuiitcoop.org/membership.php">
+                        <span>MEMBERSHIP</span>
+                        <img src="{{ url_for('static', filename='css/members.png') }}" width="35" height="30" alt="members logo">
+                    </a>
+                </li>
+
+                <!-- Branches -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://msuiitcoop.org/branches.php">
+                        <span>BRANCHES</span>
+                        <img src="{{ url_for('static', filename='css/branches.png') }}" width="35" height="30" alt="branches logo">
+                    </a>
+                </li>
+
+                <!-- FAQs -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://msuiitcoop.org/faq.php">
+                        <span>FAQs</span>
+                        <img src="{{ url_for('static', filename='css/faq.png') }}" width="35" height="30" alt="FAQs logo">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

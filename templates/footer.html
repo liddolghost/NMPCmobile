@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px; /* Improved padding for better spacing */
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-top p {
+      margin-bottom: 10px; /* Increased spacing between paragraphs */
+    }
+    .footer-top, .footer-bottom {
+      margin-top: 20px; /* Adjusted margin for better separation */
+    }
+    .footer-bottom {
+      background-color: #212529; /* Add background color */
+      padding: 15px 10px; /* Add padding for better spacing */  
+      color: #8c989e;
+      font-size: 14px; /* Adjusted font size for better readability */
+    }
+    .footer-top p {
+      margin-bottom: 5px; /* Adjusted spacing between paragraphs */
+    }
+    .footer-bottom p {
+      margin-bottom: 5px; /* Adjusted spacing between paragraphs */
+    }
+    .footer-bottom a {
+      color: #8c989e; /* Set the default color */
+      text-decoration: none;
+      transition: color 0.3s ease; /* Add transition for a smooth color change */
+    }
+    .footer-bottom a:hover {
+      color: #9c0d0f; /* Set the hover color */
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px; /* Adjusted margin for better alignment */
+    }
+    .social-icons a {
+      margin: 0 10px;
+      transition: transform 0.3s ease; /* Added transition for hover effect */
+    }
+    .social-icons a:hover {
+      transform: translateY(-5px);
+    }
+    @media (max-width: 600px) {
+      .footer {
+        font-size: 14px; /* Increased font size for better readability on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<footer>
+  <div class="footer-top">
+    <p><strong>Stay Connected With Us</strong></p>
+    <p>Follow us on your favorite social media sites:</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/msuiitcoop/" target="_blank"><img src="{{ url_for('static', filename='css/facebook-icon.png') }}" alt="Facebook"></a>
+      <a href="https://twitter.com/iit_coop" target="_blank"><img src="{{ url_for('static', filename='css/twitter-icon.png') }}" alt="Twitter"></a>
+      <a href="https://www.instagram.com/iitcoopofficial/" target="_blank"><img src="{{ url_for('static', filename='css/instagram-icon.png') }}" alt="Instagram"></a>
+      <a href="https://www.youtube.com/channel/UCH4Dj12y2ufuIYyIxFFPmxg/videos" target="_blank"><img src="{{ url_for('static', filename='css/youtube-icon.png') }}" alt="YouTube"></a>
+      <a href="mailto:msuiitnmpc@msuiitcoop.org" target="_blank"><img src="{{ url_for('static', filename='css/email-icon.png') }}" alt="Email"></a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p><strong>MSU-IIT NATIONAL MULTI-PURPOSE COOPERATIVE</strong></p>
+    <p><b>Head Office:</b> Gregorio T. Lluch Sr. Ave., Pala-o Iligan City, 9200, Philippines</p>
+    <p><b>Phone:</b> (063) 223-5874</p>
+    <p><b>Email:</b> <a href="mailto:msuiitnmpc@msuiitcoop.org">msuiitnmpc@msuiitcoop.org</a></p>
+    <p>
+      <a href="mailto:https://hpqs-vnzw.accessdomain.com/webmail/">Webmail</a>, 
+      <a href="http://119.93.53.245/hrmax/">HR Max</a>, 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeM90Xs_DTma_nvM_LNAunlsgvhS3EkMnblSbNBuq2lvajGtA/viewform">IT support desk</a>,
+      <a href="Yhttps://sites.google.com/view/msuiitnmpcesurvey/home?pli=1">e-Survey</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
