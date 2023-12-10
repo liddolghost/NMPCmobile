@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  /* Paran */
+
+  nav {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* formerly nav ul */
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end; 
+}
+
+nav li {
+    margin: 0 15px; /* Add some spacing between list items */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav .nav-item {
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: right;
+    flex-direction: row;
+}
+
+#nav .nav-item {
+    margin-right: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+/* End Paran */
+
+
+
+
+/* Faheem */
+.btn-maroon {
+    background-color: rgb(182, 29, 29);
+    border-color: rgb(182, 29, 29);
+    color: white !important;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay h3 {
+    margin-bottom: 100px;
+    color: rgb(255, 255, 255) !important;
+    z-index: 1; /* Add this line */
+}
+
+.overlay h3::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    width: 120%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.447);
+    z-index: -1;
+}
+
+.btn-maroon:hover,
+.btn-maroon:active,
+.btn-maroon:focus {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+/* End Faheem */
+
+/* Jucille */
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 10px; /* Improved padding for better spacing */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer-top p {
+  margin-bottom: 10px; /* Increased spacing between paragraphs */
+}
+.footer-top, .footer-bottom {
+  margin-top: 20px; /* Adjusted margin for better separation */
+}
+.footer-bottom {
+  background-color: #212529; /* Add background color */
+  padding: 15px 10px; /* Add padding for better spacing */  
+  color: #8c989e;
+  font-size: 14px; /* Adjusted font size for better readability */
+}
+.footer-top p {
+  margin-bottom: 5px; /* Adjusted spacing between paragraphs */
+}
+.footer-bottom p {
+  margin-bottom: 5px; /* Adjusted spacing between paragraphs */
+}
+.footer-bottom a {
+  color: #8c989e; /* Set the default color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Add transition for a smooth color change */
+}
+.footer-bottom a:hover {
+  color: #9c0d0f; /* Set the hover color */
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Adjusted margin for better alignment */
+}
+.social-icons a {
+  margin: 0 10px;
+  transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 600px) {
+  .footer {
+    font-size: 14px; /* Increased font size for better readability on smaller screens */
+  }
+}
+
+/* End Jucille */
+
+
+
+
+  
+  .grid-parent {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px; /* Adjust the gap as needed */
+  }
+
+
+  
+  .container {
+    grid-row: 3; /* Place the .container in the third row */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px;
+    max-width: 4000px;
+    padding: 20px;
+  }
+  
+  .item > #line {
+    border: 1px solid #9C0D0F;
+  }
+  
+#image {
+    max-width: 60px;
+    height: auto;
+  }
+  
+  .item {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #9C0D0F;
+  }
+  
+  ul {
+    margin-bottom: 10px;
+  }
+  
+  li {
+    text-align: left;
+    margin: 10px 0;
+  }
+  
+  #anchor {
+    text-decoration: none;
+    color: gray;
+  }
+  
+  #anchor:active {
+    text-decoration: underline;
+    color: gray;
+  }
+  
+  #anchor:hover {
+    color: #9C0D0F;
+    text-decoration: underline;
+  }
+  
+  ul ul {
+    padding-left: 20px;
+  }
+  
+  .item img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .item span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #9C0D0F;
+  }
+  
+  .item hr {
+    margin: 10px 0;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 75%;
+    height: 50%;
+    overflow-y: auto;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .modal {
+    display: none;
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 100px;
+      
+    }
+  
+    .item span, .grid-parent {
+      display: block;
+      /* vertical-align: middle; */
+    }
+  
+    .item img {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  
+    .links {
+      display: none;
+    }
+
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        margin-right: 40;
+    }
+
+    .navbar-nav .nav-item a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item a span {
+        display: none;
+    }
+
+    .navbar-nav .nav-item a img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+  
+  
+  @media (min-width: 500px) {
+    .modal {
+      display: none !important;
+    }
+  }
+  

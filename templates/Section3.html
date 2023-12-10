@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0; 
+    }
+  
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 30px; 
+      max-width: 5000px; 
+      padding: 20px;
+    }
+  
+    .item hr {
+    
+      border: 1px solid #9C0D0F; 
+    }
+  
+    img {
+      max-width: 60px;
+      height: auto;
+    }
+  
+    .item {
+      box-sizing: border-box;
+      border-radius: 5px;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #9C0D0F;
+    }
+  
+    ul {
+      margin-bottom: 10px; 
+    }
+  
+    li {
+      text-align: left; 
+      margin: 10px 0;
+    }
+  
+    a {
+      text-decoration: none;
+      color: gray;
+    }
+  
+    a:active {
+      text-decoration: underline;
+      color: gray;
+    }
+  
+    a:hover {
+      color: #9C0D0F;
+      text-decoration: underline;
+    }
+  
+    ul ul {
+      padding-left: 20px; 
+    }
+  
+    .item img {
+      vertical-align: middle; 
+      margin-right: 10px; 
+    }
+  
+    .item span {
+      display: inline-block; 
+      vertical-align: middle; 
+      color: #9C0D0F;
+    }
+  
+    .item hr {
+      margin: 10px 0; 
+    }
+
+
+
+
+
+
+  
+    .modal {
+     
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease; 
+    }
+
+     
+
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 75%;
+      height: 50%;
+      overflow-y: auto;
+
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+
+.container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.modal {
+  display: none;
+}
+
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item span {
+    display: block;
+    vertical-align: middle;
+  }
+
+  .item img {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+ 
+  .links {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .modal {
+    display: none !important;
+
+}
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  /**position: relative;*/
+  bottom: 0;
+  /**width: 100%;*/
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+
+
+  </style>
+  
+</head>
+<body>
+
+  <div class="container">
+    <div class="item" id="1">
+      <img src="{{URL('img/icons/a.svg')}}" alt="Savings">
+      <span>Savings</span>
+      <hr>
+      <ul class="links">
+        <li><a href="https://www.msuiitcoop.org/savings.php#share_capital">Share Capital</a></li>
+        <li><a href="https://www.msuiitcoop.org/savings.php#savings_deposit">Savings Deposit</a></li>
+        <li><a href="https://www.msuiitcoop.org/savings.php#time_deposit">Time Deposit</a></li>
+        <li><a href="https://www.msuiitcoop.org/savings.php#youth_coop">Youth Selector</a></li>
+        <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Laboratory Cooperative</a>
+          <ul>
+            <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Kiddie Savers</a></li>
+            <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Youth/Teen Savers</a></li>
+            <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Aflatuon</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="item" id="2">
+      <img src="{{URL('img/icons/b.svg')}}" alt="Cash & Loans">
+      <span>Cash & Loans</span>
+      <hr>
+      <ul class="links">
+        <li><a href="https://www.msuiitcoop.org/loans.php#micro_loan">Micro Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#msme_loan">MSME Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#credit_line">Credit Line</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#back2back_loan">Back-to-back Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#petty_cash_loan">Enhanced Petty Cash Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#personal_loan">Personal Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#salary_loan">Salary</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#educational_loan">Educational Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#pensioners_loan">Pensioner's Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#medel">Medical Emergency Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#car_loan">Enhanced Car Financing Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#gap_loan">Gadget and Appliance Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#bonus_incentive_loan">Bonus/Incentive Loan</a></li>
+        <li><a href="https://www.msuiitcoop.org/loans.php#lgu_salary_loan">LGU Salary Loan</a></li>
+
+      </ul>
+
+
+    </div>
+
+
+    <div class="item" id="3">
+      <img src="{{URL('img/icons/c.svg')}}" alt="Allied">
+      <span>Allied Business</span>
+      <hr>
+      <ul class="links">
+        <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_academy">MSU-IIT National Cooperative Academy</a></li>
+        <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_assurance">Insurances offered from CLIMBS</a></li>
+        <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_housing">Housing Cooperative</a></li>
+        <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_agribusiness">Agri-Business</a></li>
+
+
+      </ul>
+    </div>
+
+    
+    <div class="item" id="4">
+      <img src="{{URL('img/icons/d.svg')}}" alt="Member Benefits">
+      <span>Member Benefits</span>
+      <hr>
+      <ul class="links">
+        <li><a href="https://www.msuiitcoop.org/member-benefits.php#coop_care">Enhanced Coop Care</a></li>
+        <li><a href="https://www.msuiitcoop.org/member-benefits.php#sunshine_fund">Sunshine (Damaiyan) Fund</a></li>
+        <li><a href="https://www.msuiitcoop.org/member-benefits.php#yakap">YAKAP - Yaman sa Kalusugan Program</a></li>
+      </ul>
+    
+
+    </div>
+  </div>
+
+
+
+ <!-- Modals -->
+ <div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <ul>
+      <li><a href="https://www.msuiitcoop.org/savings.php#share_capital">Share Capital</a></li>
+      <li><a href="https://www.msuiitcoop.org/savings.php#savings_deposit">Savings Deposit</a></li>
+      <li><a href="https://www.msuiitcoop.org/savings.php#time_deposit">Time Deposit</a></li>
+      <li><a href="https://www.msuiitcoop.org/savings.php#youth_coop">Youth Selector</a></li>
+      <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Laboratory Cooperative</a>
+        <ul>
+          <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Kiddie Savers</a></li>
+          <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Youth/Teen Savers</a></li>
+          <li><a href="https://www.msuiitcoop.org/savings-laboratory-coop.php">Aflatuon</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <ul>
+      <li><a href="https://www.msuiitcoop.org/loans.php#micro_loan">Micro Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#msme_loan">MSME Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#credit_line">Credit Line</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#back2back_loan">Back-to-back Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#petty_cash_loan">Enhanced Petty Cash Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#personal_loan">Personal Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#salary_loan">Salary</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#educational_loan">Educational Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#pensioners_loan">Pensioner's Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#medel">Medical Emergency Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#car_loan">Enhanced Car Financing Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#gap_loan">Gadget and Appliance Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#bonus_incentive_loan">Bonus/Incentive Loan</a></li>
+      <li><a href="https://www.msuiitcoop.org/loans.php#lgu_salary_loan">LGU Salary Loan</a></li>
+
+    </ul>
+
+
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <ul>
+      <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_academy">MSU-IIT National Cooperative Academy</a></li>
+      <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_assurance">Insurances offered from CLIMBS</a></li>
+      <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_housing">Housing Cooperative</a></li>
+      <li><a href="https://www.msuiitcoop.org/allied-business.php#coop_agribusiness">Agri-Business</a></li>
+
+
+    </ul>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <ul>
+      <li><a href="https://www.msuiitcoop.org/member-benefits.php#coop_care">Enhanced Coop Care</a></li>
+      <li><a href="https://www.msuiitcoop.org/member-benefits.php#sunshine_fund">Sunshine (Damaiyan) Fund</a></li>
+      <li><a href="https://www.msuiitcoop.org/member-benefits.php#yakap">YAKAP - Yaman sa Kalusugan Program</a></li>
+    </ul>
+  
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const itemContainer1 = document.getElementById('1');
+    const itemContainer2 = document.getElementById('2');
+    const itemContainer3 = document.getElementById('3');
+    const itemContainer4 = document.getElementById('4');
+
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'none';
+    }
+
+    itemContainer1.addEventListener('click', () => openModal('modal1'));
+    itemContainer2.addEventListener('click', () => openModal('modal2'));
+    itemContainer3.addEventListener('click', () => openModal('modal3'));
+    itemContainer4.addEventListener('click', () => openModal('modal4'));
+
+    document.querySelectorAll('.close').forEach((closeBtn) => {
+      closeBtn.addEventListener('click', () => {
+        const modalId = closeBtn.parentElement.id;
+        closeModal(modalId);
+      });
+    });
+
+    
+    window.addEventListener('click', (event) => {
+      if (event.target.classList.contains('modal')) {
+        const modalId = event.target.id;
+        closeModal(modalId);
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>

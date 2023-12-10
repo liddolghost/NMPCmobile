@@ -15,4 +15,4 @@ def nav2(nav2_param):
     return render_template('nav2.html', nav2_param=nav2_param)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
